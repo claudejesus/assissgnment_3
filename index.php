@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
 
 <div>
     <h1>Welcome to index page of our system </h1>
