@@ -1,33 +1,22 @@
-<?php
-include 'db.php'; // Include the database connection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="register.html">Register</a></p>
+        </form>
+    </div>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $email = $_POST['user_email'];
-    $password = $_POST['user_password'];
-
-    // Check if the email exists in the database
-    $sql = "SELECT * FROM tbl_users WHERE user_email='$email'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // User found, now check the password
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['user_password'])) {
-            echo "Login successful!";
-        } else {
-            echo "Invalid password!";
-        }
-    } else {
-        echo "No user found with this email!";
-    }
-}
-?>
-
-<!-- Login Form -->
-<form method="POST" action="login.php">
-    <input type="email" name="user_email" placeholder="Email" required><br>
-    <input type="password" name="user_password" placeholder="Password" required><br>
-    <button type="submit">Login</button>
-</form>
-
+    <script src="script.js"></script>
+</body>
+</html>
