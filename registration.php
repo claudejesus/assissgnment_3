@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!-- Registration Form -->
-<form method="POST" action="register.php">
+<form method="POST" action="registration.php">
     <input type="text" name="user_firstname" placeholder="First Name" required><br>
     <input type="text" name="user_lastname" placeholder="Last Name" required><br>
     <select name="user_gender" required>

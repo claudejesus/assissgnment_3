@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root"; // your database username
 $password = ""; // your database password (default for local MySQL is an empty string)
-$dbname = "yourgroupnumber_shareride_db"; // your database name
+$dbname = "my_database"; // your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
